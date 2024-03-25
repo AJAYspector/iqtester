@@ -1,0 +1,41 @@
+
+{% extends 'index.html' %} 
+
+{% block content %} 
+
+<h3 style="color: #b042f5;"> five page in first page</h3>
+
+<style>
+    svg {
+      position: absolute;
+      top: 325px;
+      right: 100px;
+      width: 10%;
+    }
+    .svg1 {
+      position: absolute;
+      top: 325px;
+      left: 280px;
+      width: 10%;
+    }
+</style>
+<div style="right: 50%;">
+<svg  class="svg1" id="svg" viewbox="0 0 100 100">
+    <circle cx="50" cy="50" r="45" fill="#b042f5" />
+    <path
+      fill="none"
+      stroke-linecap="round"
+      stroke-width="5"
+      stroke="#fff"
+      stroke-dasharray="{{score}},{{score1}}"
+      d="M50 10
+                 a 40 40 0 0 1 0 80
+                 a 40 40 0 0 1 0 -80"
+    />
+    
+    <text x="50" y="50" text-anchor="middle" dy="7" font-size="20">
+      {{per}}%
+    </text>
+  </svg>
+</div>
+  {% endblock %}

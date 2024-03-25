@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+
+<h3 style="color: #b042f5;"> second page</h3>
+
+
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>User Name:</td>
+                <td> <input type="text" name="user"></td>
+                <td>{{msg}}</td>
+            </tr>
+            <tr>
+                <td>Password :</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+        </table>
+        <button>login</button>
+    </form>
+    if no id <a href="{% url 'sign' %}"> signup</a> here
+
+    {% endblock %}
